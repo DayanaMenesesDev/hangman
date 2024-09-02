@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/normalize.css" />
+    <link rel="stylesheet" href="./public/css/game.css" />
+    <script
+      src="https://kit.fontawesome.com/3cf8ee9758.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="main">
+        <section class="main__container-title">
+            <h1>Hangman</h1>
+        </section>
+        <section class="main__container-setup-game">
+            <p>Wins: <span id="win"></span></p>
+            <p>Ayudas: <span id="helpContainer">3</span></p>
+            <p>Lifes: <span id="lifes"></span></p>
+        </section>
+        <section class="main__container-word">
+            <article>
+                <span id="contentWord"></span>
+                <button id="btnHelp">
+                    <i class="fa-solid fa-circle-question"></i>
+                </button>
+            </article>
+            <button id="restart">restart Game</button>
+        </section>
+
+        <section class="main__container-btnLetter">
+            <button class="btnLetter">A</button>
+            <button class="btnLetter">B</button>
+            <button class="btnLetter">C</button>
+            <button class="btnLetter">D</button>
+            <button class="btnLetter">E</button>
+            <button class="btnLetter">F</button>
+            <button class="btnLetter">G</button>
+            <button class="btnLetter">H</button>
+            <button class="btnLetter">I</button>
+            <button class="btnLetter">J</button>
+            <button class="btnLetter">K</button>
+            <button class="btnLetter">L</button>
+            <button class="btnLetter">M</button>
+            <button class="btnLetter">N</button>
+            <button class="btnLetter">Ñ</button>
+            <button class="btnLetter">O</button>
+            <button class="btnLetter">P</button>
+            <button class="btnLetter">Q</button>
+            <button class="btnLetter">R</button>
+            <button class="btnLetter">S</button>
+            <button class="btnLetter">T</button>
+            <button class="btnLetter">U</button>
+            <button class="btnLetter">V</button>
+            <button class="btnLetter">W</button>
+            <button class="btnLetter">X</button>
+            <button class="btnLetter">Y</button>
+            <button class="btnLetter">Z</button>
+        </section>
+    </main>
+    <script src="./public/js/game.js"></script>
+  </body>
+</html>
