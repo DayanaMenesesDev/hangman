@@ -69,11 +69,6 @@ const win = () => {
 };
 
 const help = () => {
-  btnHelp.addEventListener("click", () => {
-    if (wordSelect === contentWord.textContent) {
-      win();
-      return;
-    }
     let currentHelp = parseInt(helpContainer.textContent);
     if (currentHelp > 0) {
       helpContainer.innerHTML = currentHelp - 1;
@@ -89,7 +84,7 @@ const help = () => {
         revealedLetters.has(letterToReveal) ||
         contentWord.textContent.includes(letterToReveal)
       );
-      if (!letterToReveal) { return }
+      if (!letterToReveal) { return; }
       revealedLetters.add(letterToReveal);
       wordSecretArray.forEach((letter, index) => {
         if (letter === letterToReveal) {
@@ -109,7 +104,6 @@ const help = () => {
      
       contentWord.textContent = wordSecret.join("");
     }
-  });
 };
 
 const handleLetterClick = (e) => {
@@ -144,7 +138,7 @@ const handleLetterClick = (e) => {
         if (wordSelect === contentWord.textContent) {
           win();
         }
-      }, 500);
+      }, 100);
     }
   }
 };
@@ -153,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
   contentWin.innerHTML = wins;
   resetGame();
   restartGame.removeAttribute("disabled");
-  help();
 });
 
 restartGame.addEventListener("click", () => {
@@ -168,3 +161,14 @@ restartGame.addEventListener("click", () => {
 btnLetter.forEach((i) => {
   i.addEventListener("click", handleLetterClick);
 });
+
+
+btnHelp.addEventListener('click', ()=> {
+  help()
+  if (wordSelect == contentWord.textContent) {
+    console.log(wordSelect);
+    setTimeout(() => {
+        win();
+    }, 200);
+  }
+})
